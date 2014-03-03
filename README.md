@@ -29,6 +29,23 @@ An example using the NERDtree plugin.
     cd ~/dotfiles
     git submodule add https://github.com/scrooloose/nerdtree.git vim/bundle/nerdtree
     
-    
+
+Updating
+--------
+
+1. Pull changes.
+
+        cd ~dotfiles
+        git pull
+        
+2. Initialize and update the git submodules.
+
+        git submodule init
+        git submodule update
+        
+3. Create the symbolic links if new ones have been added.
+
+        ./makesymlinks.sh
+
     
 
