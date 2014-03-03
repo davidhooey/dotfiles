@@ -6,9 +6,19 @@ This repository includes all of my custom dotfiles. They should be cloned to you
 Installation
 ------------
 
-    git clone git@github.com:davidhooey/dotfiles.git ~/dotfiles
-    cd ~/dotfiles
-    ./makesymlinks.sh
+1. Clone the repo and change to the newly created `~/dotfiles/`.
+    
+        git clone git@github.com:davidhooey/dotfiles.git ~/dotfiles
+        cd ~/dotfiles
+
+2. Initialize and update the git submodules.    
+    
+        git submodule init
+        git submodule update
+    
+3. Create the symbolic links.
+    
+        ./makesymlinks.sh
     
 
 VIM Plugin Installation Using Pathogen and Git Submodules
