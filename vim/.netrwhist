@@ -1,6 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/davidhooey/Dropbox/sourcecode/Ruby/otdbdiff'
-let g:netrw_dirhist_2='/Users/davidhooey/Dropbox/sourcecode/Ruby/otdbdiff/src'
-let g:netrw_dirhist_3='/Users/davidhooey/Dropbox/sourcecode/Ruby/otdbdiff/src/schema_objects'
-let g:netrw_dirhist_4='/Users/davidhooey/Temp'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/davidhooey/dotfiles'
