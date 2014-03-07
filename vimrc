@@ -53,7 +53,10 @@ ino <up>    <Nop>
 no  <down> ddp
 no  <up>   ddkP
 
-" Centering screen mappings
+" Move to beginning/ending of line while in insert mode.
+inoremap <C-e> <C-o>$
+inoremap <C-a> <C-o>0
+
 nmap n nzz
 nmap N Nzz
 nmap G Gzz
@@ -90,6 +93,9 @@ nnoremap <C-H> <C-W><C-H>
 
 " NERDtree
 map <leader>n :NERDTreeToggle<CR>
+
+" tComment
+map <leader>c <C-_><C-_>
 
 " ===============================================
 " Evernote
