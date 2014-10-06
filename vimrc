@@ -17,7 +17,7 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set cursorline
+"set cursorline
 set nowrap
 set term=screen-256color
 set completeopt=menu
@@ -30,7 +30,7 @@ set guifont=Monaco:h12
 set hlsearch
 set autoindent
 
-colorscheme solarized
+"colorscheme solarized
 
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
