@@ -57,6 +57,11 @@ no  <up>   ddkP
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
 
+" Centering after movement
+nmap j jzz
+nmap k kzz
+nmap <C-f> <C-f>zz
+nmap <C-b> <C-b>zz
 nmap n nzz
 nmap N Nzz
 nmap G Gzz
