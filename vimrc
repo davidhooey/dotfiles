@@ -1,4 +1,6 @@
-execute pathogen#infect()
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
 filetype plugin indent on
 
@@ -10,31 +12,47 @@ set splitright
 set ambiwidth=single
 set laststatus=2
 set encoding=utf-8
-set nocompatible
 set backspace=indent,eol,start
-set t_Co=256
+set nocompatible
+"set t_Co=256
 set smartindent
-set tabstop=4
+set cursorline
 set shiftwidth=4
+set tabstop=4
 set expandtab
-"set cursorline
 set nowrap
-set term=screen-256color
+"set term=screen-256color
+set linebreak
 set completeopt=menu
 set history=1000
 set ruler
 set showcmd
 set incsearch
 set number
-set guifont=Monaco:h12
+set guifont=Source\ Code\ Pro\ for\ Powerline:16
 set hlsearch
 set autoindent
+set wildmenu
+set scrolloff=5
 
-"colorscheme solarized
+let g:Powerline_symbols = 'fancy'
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
 
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-let g:lightline = { 'colorscheme': 'solarized_light' }
+if has("gui_running")
+    let s:uname = system("uname")
+    if s:uname == "Darwin\n"
+        set guifont=Source\ Code\ Pro\ for\ Powerline:16
+    endif
+endif
+
+" Uses terminals default colours
+let g:onedark_termcolors=16
+
+colorscheme onedark
+
 let mapleader=","
 
 " ================================================
@@ -58,13 +76,13 @@ inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
 
 " Centering after movement
-nmap j jzz
-nmap k kzz
-nmap <C-f> <C-f>zz
-nmap <C-b> <C-b>zz
-nmap n nzz
-nmap N Nzz
-nmap G Gzz
+"nmap j jzz
+"nmap k kzz
+"nmap <C-f> <C-f>zz
+"nmap <C-b> <C-b>zz
+"nmap n nzz
+"nmap N Nzz
+"nmap G Gzz
 
 " Quick pairing
 imap <leader>' ''<ESC>i
@@ -101,11 +119,6 @@ map <leader>n :NERDTreeToggle<CR>
 
 " tComment
 map <leader>c <C-_><C-_>
-
-" ===============================================
-" Evernote
-" ===============================================
-let g:evervim_devtoken='S=s127:U=d30adc:E=14be5ac74a5:C=1448dfb48ad:P=1cd:A=en-devtoken:V=2:H=f8cf867b6eb0df82a945b3d8d34f629a'
 
 " ===============================================
 " NERDtree
