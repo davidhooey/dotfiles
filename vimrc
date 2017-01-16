@@ -7,6 +7,7 @@ filetype plugin indent on
 syntax on
 syntax enable
 
+set showtabline=2
 set splitbelow
 set splitright
 set ambiwidth=single
@@ -17,6 +18,7 @@ set nocompatible
 "set t_Co=256
 set smartindent
 set cursorline
+"set cursorcolumn
 set shiftwidth=4
 set tabstop=4
 set expandtab
@@ -52,6 +54,11 @@ endif
 let g:onedark_termcolors=16
 
 colorscheme onedark
+
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+highlight CursorLine guibg=#4b4b4b ctermbg=238
+"highlight CursorColumn guibg=#4b4b4b ctermbg=238
 
 let mapleader=","
 
